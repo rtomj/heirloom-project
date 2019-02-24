@@ -1,4 +1,4 @@
-### The Heirloom Project
+## The Heirloom Project
 
 This is a mirror of [The Heirloom Project](http://heirloom.sourceforge.net) CVS repositories— a collection 
 of hisorical UNIX tools,principally derived from System V, which have been patched to build on a modern system.
@@ -8,7 +8,7 @@ some of the original implementations of m4, lex, yacc, SCCS, troff, etc. Also in
 original [vi](http://ex-vi.sourceforge.net)  and [nail](http://heirloom.sourceforge.net/mailx.html) (mailx) 
 repositories.
 
-## Changes:
+### Changes:
 * After encountering cpio errors and researching the cause, [this page](https://www.virtualbox.org/wiki/SolarisCrossCompiler) 
 recommends the following changes:
 
@@ -36,3 +36,5 @@ recommends the following changes:
   
 * Changed vi/ex_re.c to use heirloom/libcommon/regexp.h
 
+### Notes:
+* pkgrm has an issue with directories. See heirloom-pkgtools/libpkg/rrmdir.c 
