@@ -66,7 +66,7 @@
 #endif
 #endif
 
-#include <bsd/bsd.h>		/* bsdsignal() */
+#include "../include/bsd/bsd.h"		/* bsdsignal() */
 
 #ifdef DISTRIBUTED
 #	include <dm/Avo_AcknowledgeMsg.h>

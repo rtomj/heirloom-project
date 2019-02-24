@@ -57,6 +57,7 @@
 #include <stdarg.h>		/* va_list, va_start(), va_end() */
 #include <vroot/report.h>	/* SUNPRO_DEPENDENCIES */
 
+#include "../include/bsd/bsd.h" /* bsdsignal */
 #include <unistd.h>
 
 #ifdef TEAMWARE_MAKE_CMN
