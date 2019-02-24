@@ -161,9 +161,9 @@ FEATURES	= -DLISPCODE -DCHDIR -DFASTTAG -DUCVISUAL -DMB -DBIT8
 # (wchar.h, wctype.h, btowc() etc.) which is not provided by older
 # compilation environments.
 #
-REINC	= -I./libuxre -DUXRE
-RELIB	= -L./libuxre -luxre
-RETGT	= uxre
+#REINC	= -I./libuxre -DUXRE
+#RELIB	= -L./libuxre -luxre
+#RETGT	= uxre
 
 #
 # VMUNIX should be correct for any modern Unix.
