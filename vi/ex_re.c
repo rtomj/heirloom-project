@@ -114,7 +114,8 @@ static int	regerrno;
 
 #define	REGEXP_H_USED_FROM_VI
 
-#include "regexp.h"
+/* #include "regexp.h" */ 
+#include "../heirloom/heirloom/libcommon/regexp.h"
 
 #ifndef	REG_ICASE
 #define	REG_ICASE	1
@@ -1316,3 +1317,4 @@ execute(int gf, line *addr)
 	return step(p, re.Expbuf);
 }
 #endif	/* !UXRE */
+
