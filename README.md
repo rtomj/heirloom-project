@@ -9,7 +9,7 @@ original [vi](http://ex-vi.sourceforge.net)  and [nail](http://heirloom.sourcefo
 repositories.
 
 ## Changes:
-After encountering cpio errors and researching the cause, [this page](https://www.virtualbox.org/wiki/SolarisCrossCompiler) 
+* After encountering cpio errors and researching the cause, [this page](https://www.virtualbox.org/wiki/SolarisCrossCompiler) 
 recommends the following changes:
 
 `fix the call to open on line 1013 of libpkg/pkgtrans.c to open(tmp_file, O_RDWR, O_CREAT)`
@@ -20,11 +20,11 @@ recommends the following changes:
 
 `replace the sizeof (unsigned long) on line 328 of libpkg/verify.c to ucp += 4`
 
-pkgtrans.c and verify.c have been changed but runcmd.c still uses /sbin/sh
+* pkgtrans.c and verify.c have been changed but runcmd.c still uses /sbin/sh
 
-Changed heirloom-devtools/make/bsd/bsd.cc to [not use auto as type specifier](https://www.illumos.org/rb/r/353/diff/1?expand=1#0)
+* Changed heirloom-devtools/make/bsd/bsd.cc to [not use auto as type specifier](https://www.illumos.org/rb/r/353/diff/1?expand=1#0)
 
-Changed "include<bsd/bsd.h>" to use the included bsd.h in heirloom-devtools/make/include/bsd for the following files:
+* Changed "include<bsd/bsd.h>" to use the included bsd.h in heirloom-devtools/make/include/bsd for the following files:
 
   -heirloom-devtools/make/bsd/bsd.cc
 
