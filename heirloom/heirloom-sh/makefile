@@ -10,6 +10,11 @@ ROOT=
 SV3BIN=/usr/5bin
 
 #
+# Secondary destination directory for the "sh" and "jsh" binaries.
+#
+MODBIN=/sbin
+
+#
 # Location for manual pages (with man1 below).
 #
 MANDIR=/usr/share/man/5man
@@ -96,6 +101,18 @@ install: all
 	$(UCBINST) -c -m 644 sh.1.out $(ROOT)$(MANDIR)/man1/sh.1
 	rm -f $(ROOT)$(MANDIR)/man1/jsh.1
 	cd $(ROOT)$(MANDIR)/man1 && $(LNS) sh.1 jsh.1
+
+install-sbin: all        
+	test -d $(ROOT)$(MODBIN) || mkdir -p $(ROOT)$(MODBIN)
+	$(UCBINST) -c -m 755 sh $(ROOT)$(MODBIN)/sh
+	$(STRIP) $(ROOT)$(MODBIN)/sh
+	rm -f $(ROOT)$(MODBIN)/jsh
+	cd $(ROOT)$(MODBIN) && $(LNS) sh jsh
+	test -d $(ROOT)$(MANDIR)/man1 || mkdir -p $(ROOT)$(MANDIR)/man1
+	$(UCBINST) -c -m 644 sh.1.out $(ROOT)$(MANDIR)/man1/sh.1
+	rm -f $(ROOT)$(MANDIR)/man1/jsh.1
+	cd $(ROOT)$(MANDIR)/man1 && $(LNS) sh.1 jsh.1
+
 
 maninstall: sh.1.out
 	$(UCBINST) -c -m 644 sh.1.out $(ROOT)$(MANDIR)/man1/sh.1
