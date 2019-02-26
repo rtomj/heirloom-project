@@ -1,6 +1,7 @@
 ## The Heirloom Project
 
-This is a mirror of [The Heirloom Project](http://heirloom.sourceforge.net) CVS repositories— a collection 
+This is a fork of [The Heirloom Project](http://heirloom.sourceforge.net) CVS repositories— a 
+collection 
 of hisorical UNIX tools,principally derived from System V, which have been patched to build on a modern system.
 
 Particularly noteworthy are its historical Bourne shell, toolchain, and source code management tools. It includes 
@@ -44,4 +45,9 @@ recommends the following changes:
 * Currently ex-vi, and sh from this repo build on FreeBSD 12 with patches from it's ports collection. There are other patches for 
 the toolchest, mailx, and doctools which will probably work but I'm not sure how to include all of these in the repo (include BSD 
 license along with the other licenses?)
+
+### Legal:
+I in no way claim to have written any of the original software contained in this repo. This software 
+derives from original Unix sources released as open source by Caldera and Sun and [The Heirloom 
+Project](http://heirloom.sourceforge.net) maintained by Gunnar Ritter. 
 
