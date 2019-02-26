@@ -35,6 +35,13 @@ recommends the following changes:
   -heirloom-devtools/make/src/misc.cc
   
 * Changed vi/ex_re.c to use heirloom/libcommon/regexp.h
+* Added /sbin make install option for sh
 
 ### Notes:
 * pkgrm has an issue with directories. See heirloom-pkgtools/libpkg/rrmdir.c 
+* All components compiled successfully on CRUX 3.4 Linux with gcc 7.4.0 
+* Should build on most Linux distributions
+* Currently ex-vi, and sh from this repo build on FreeBSD 12 with patches from it's ports collection. There are other patches for 
+the toolchest, mailx, and doctools which will probably work but I'm not sure how to include all of these in the repo (include BSD 
+license along with the other licenses?)
+
